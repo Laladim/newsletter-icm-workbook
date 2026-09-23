@@ -380,8 +380,11 @@ def assert_cold_start(root: Path) -> None:
 
 
 def main() -> int:
+    temp_root = Path("/private/tmp")
+    if not temp_root.is_dir():
+        temp_root = Path(tempfile.gettempdir())
     with tempfile.TemporaryDirectory(
-        prefix="newsletter-workbook-smoke-", dir="/private/tmp"
+        prefix="newsletter-workbook-smoke-", dir=temp_root
     ) as temp:
         sandbox = Path(temp) / "newsletter-icm-workbook"
         shutil.copytree(
