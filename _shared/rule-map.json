@@ -1,0 +1,182 @@
+{
+  "_what_this_is": "Tracks which factory files derive from shared rules so a rule change cannot drift silently.",
+  "_scan": {
+    "dirs": [
+      "_shared",
+      "_templates"
+    ],
+    "files": [
+      "README.md",
+      "START-HERE.md",
+      "DISCUSSION-GUIDE.md",
+      "CONTEXT.md",
+      "AGENTS.md",
+      "CLAUDE.md"
+    ],
+    "ignore": [
+      ".git",
+      "editions",
+      "publications"
+    ]
+  },
+  "files": {
+    "AGENTS.md": {
+      "derives_from": {
+        "CONTEXT.md": "9fe2e3fdb6df",
+        "_shared/safety-contract.md": "b6f0ab4645ec"
+      }
+    },
+    "CLAUDE.md": {
+      "derives_from": {
+        "CONTEXT.md": "9fe2e3fdb6df",
+        "_shared/safety-contract.md": "b6f0ab4645ec"
+      }
+    },
+    "START-HERE.md": {
+      "derives_from": {
+        "_shared/safety-contract.md": "b6f0ab4645ec",
+        "_shared/approval-contract.md": "f52f83da4bfb"
+      }
+    },
+    "DISCUSSION-GUIDE.md": {
+      "derives_from": {
+        "_shared/safety-contract.md": "b6f0ab4645ec"
+      }
+    },
+    "CONTEXT.md": {
+      "derives_from": {
+        "_shared/safety-contract.md": "b6f0ab4645ec",
+        "_shared/edition-contract.md": "610f0c26ae3c",
+        "_shared/skill-interface.md": "b05f6e47f133"
+      }
+    },
+    "_templates/publication/CONTEXT.md": {
+      "derives_from": {
+        "_shared/safety-contract.md": "b6f0ab4645ec",
+        "_shared/skill-interface.md": "b05f6e47f133"
+      }
+    },
+    "_templates/publication/skill-bindings.md": {
+      "derives_from": {
+        "_shared/skill-interface.md": "b05f6e47f133"
+      }
+    },
+    "_templates/edition/CONTEXT.md": {
+      "derives_from": {
+        "_shared/edition-contract.md": "610f0c26ae3c"
+      }
+    },
+    "_templates/edition/01_intake/CONTEXT.md": {
+      "derives_from": {
+        "_shared/edition-contract.md": "610f0c26ae3c"
+      }
+    },
+    "_templates/edition/02_source-selection/CONTEXT.md": {
+      "derives_from": {
+        "_shared/edition-contract.md": "610f0c26ae3c"
+      }
+    },
+    "_templates/edition/03_research/CONTEXT.md": {
+      "derives_from": {
+        "_shared/edition-contract.md": "610f0c26ae3c"
+      }
+    },
+    "_templates/edition/04_routing/CONTEXT.md": {
+      "derives_from": {
+        "_shared/edition-contract.md": "610f0c26ae3c"
+      }
+    },
+    "_templates/edition/05_draft/CONTEXT.md": {
+      "derives_from": {
+        "_shared/edition-contract.md": "610f0c26ae3c"
+      }
+    },
+    "_templates/edition/06_quality-review/CONTEXT.md": {
+      "derives_from": {
+        "_shared/edition-contract.md": "610f0c26ae3c"
+      }
+    },
+    "_templates/edition/07_package/CONTEXT.md": {
+      "derives_from": {
+        "_shared/edition-contract.md": "610f0c26ae3c"
+      }
+    },
+    "_templates/edition/08_delivery/CONTEXT.md": {
+      "derives_from": {
+        "_shared/edition-contract.md": "610f0c26ae3c"
+      }
+    },
+    "_templates/edition/09_post-publish/CONTEXT.md": {
+      "derives_from": {
+        "_shared/edition-contract.md": "610f0c26ae3c"
+      }
+    },
+    "_templates/edition/01_intake/references/output-contract.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "f52f83da4bfb"
+      }
+    },
+    "_templates/edition/02_source-selection/references/output-contract.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "f52f83da4bfb"
+      }
+    },
+    "_templates/edition/03_research/references/output-contract.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "f52f83da4bfb"
+      }
+    },
+    "_templates/edition/04_routing/references/output-contract.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "f52f83da4bfb"
+      }
+    },
+    "_templates/edition/05_draft/references/output-contract.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "f52f83da4bfb"
+      }
+    },
+    "_templates/edition/06_quality-review/references/output-contract.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "f52f83da4bfb"
+      }
+    },
+    "_templates/edition/07_package/references/output-contract.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "f52f83da4bfb"
+      }
+    },
+    "_templates/edition/08_delivery/references/output-contract.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "f52f83da4bfb"
+      }
+    },
+    "_templates/edition/09_post-publish/references/output-contract.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "f52f83da4bfb"
+      }
+    }
+  },
+  "independent": [
+    "README.md",
+    "_shared/CONTEXT.md",
+    "_shared/approval-contract.md",
+    "_shared/edition-contract.md",
+    "_shared/safety-contract.md",
+    "_shared/skill-interface.md",
+    "_templates/edition/01_intake/references/CONTEXT.md",
+    "_templates/edition/02_source-selection/references/CONTEXT.md",
+    "_templates/edition/03_research/references/CONTEXT.md",
+    "_templates/edition/04_routing/references/CONTEXT.md",
+    "_templates/edition/05_draft/references/CONTEXT.md",
+    "_templates/edition/06_quality-review/references/CONTEXT.md",
+    "_templates/edition/07_package/references/CONTEXT.md",
+    "_templates/edition/08_delivery/references/CONTEXT.md",
+    "_templates/edition/09_post-publish/references/CONTEXT.md",
+    "_templates/publication/delivery-contract.md",
+    "_templates/publication/editorial-contract.md",
+    "_templates/publication/source-contract.md",
+    "_templates/publication/visual-contract.md"
+  ],
+  "blessings": []
+}
