@@ -1,0 +1,23 @@
+name: Verify workbook
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check rule drift
+        run: python3 _shared/check-rules.py
+      - name: Verify public workbook
+        run: python3 scripts/verify-template.py
+      - name: Run fictional shadow workflow
+        run: python3 scripts/smoke-test.py

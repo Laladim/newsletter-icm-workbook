@@ -19,8 +19,7 @@ For every candidate record:
 - exact title
 - source date
 - canonical source URL or file
-- News List row when applicable
-- News Analysis row when applicable
+- source record identifier when applicable
 - source credibility tier
 - audience-fit score and reason
 - freshness and duplication result

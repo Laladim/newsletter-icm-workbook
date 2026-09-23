@@ -17,7 +17,7 @@ Create `output/package-manifest.md` with:
 - Body artifact:
 - Sources count and citation check:
 - Recurring modules:
-- Selected product video and runner-up when required:
+- Optional supporting media and selection reason:
 - Links checked:
 - Audience or segment:
 - Tags and metadata:

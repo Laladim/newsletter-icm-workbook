@@ -1,20 +1,21 @@
-# Skill bindings for {{publication_title}}
+# Capability bindings for {{publication_title}}
 
-Bind only canonical capabilities that exist. A binding may be an installed
-skill, operating lane, agent definition, script, connector, or explicit human
-procedure.
+Source: the approved `publication-brief.md` and
+`_shared/skill-interface.md`. Bind only capabilities that can be verified.
 
 | Capability | Canonical binding | Trigger | Output proof | Required? |
 |---|---|---|---|---|
-| candidate discovery | configure | configure | configure | yes or no |
-| research and source verification | configure | configure | configure | yes |
-| editorial judgment | configure | configure | configure | yes |
-| newsletter writing | configure | configure | configure | yes |
-| factual and risk review | configure | configure | configure | yes |
-| visual production | configure | configure | configure | yes or no |
-| subject and packaging | configure | configure | configure | yes |
-| delivery adapter | configure | configure | configure | yes |
-| analytics and records | configure | configure | configure | yes or no |
+| candidate discovery | configure-after-brief | configure-after-brief | configure-after-brief | yes |
+| research and source verification | configure-after-brief | configure-after-brief | configure-after-brief | yes |
+| editorial judgment | configure-after-brief | configure-after-brief | configure-after-brief | yes |
+| newsletter writing | configure-after-brief | configure-after-brief | configure-after-brief | yes |
+| factual and risk review | configure-after-brief | configure-after-brief | configure-after-brief | yes |
+| visual production | configure-after-brief | configure-after-brief | configure-after-brief | yes or no |
+| subject and packaging | configure-after-brief | configure-after-brief | configure-after-brief | yes |
+| delivery adapter | manual: create and inspect the local Markdown review package | Stage 08 in shadow mode | local artifact path and visual readback | yes |
+| analytics and records | configure-after-brief | configure-after-brief | configure-after-brief | yes or no |
 
-If a procedure is explained repeatedly, promote it through the approved skill
-creation process. Do not silently turn a profile into a second copy of a skill.
+Allowed binding forms are `manual:`, `local:`, `command:`, and `none:`. Required
+rows cannot use `none:`. A `local:` or `command:` path must exist from the
+repository root. A plausible tool name, product name, URL, or absolute path is
+not a verified binding.

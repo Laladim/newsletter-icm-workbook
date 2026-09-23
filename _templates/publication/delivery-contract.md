@@ -1,28 +1,37 @@
 # Delivery contract for {{publication_title}}
 
-## Output
+Source: the approved `publication-brief.md`.
 
-Define the canonical draft format and output home. Separate a local package from
-the actual final review surface.
+## Shadow output
 
-## Platform
+- Canonical format: local Markdown.
+- Output home: replace with a repository-relative location.
+- Final review surface: replace with the local file the human will inspect.
+- External writes: none.
 
-Name the delivery platform, authorized adapter, required metadata, audience,
-and readback fields. A successful API response is not proof that the complete
-surface is correct.
+## Future platform intent
+
+Record a platform preference only if the brief names one. This section does not
+configure an integration. A platform adapter remains optional until a separate
+supervised pilot names its exact scope, dry run, readback, and rollback.
 
 ## Human authority
 
-Name who may approve, schedule, send, activate, or publish. Tool access never
-expands this authority.
+- Routine shadow-run authorization: replace.
+- Final-review approver: `human: replace`.
+- Schedule, send, activate, and publish authority: `human: replace`.
+- Post-publish record authority: `human: replace`.
+
+No agent, connector, credential, API, or automation may hold publishing
+authority.
 
 ## Verification and rollback
 
-Define how the draft is opened and inspected, how unsent state is confirmed,
-how links and metadata are checked, and what route remains available if the new
-workflow fails.
+Define how the local draft is opened and inspected, how links and metadata are
+checked, and how a failed shadow or future pilot returns to the last verified
+local package.
 
 ## Post-publish records
 
-Define the downstream records, analytics fields, exact readbacks, and approved
-automation that may run only after observed publication.
+Define metrics, fixed capture windows, destinations, and exact readbacks. Stage
+09 waits until real publication is observed under an authorized live mode.

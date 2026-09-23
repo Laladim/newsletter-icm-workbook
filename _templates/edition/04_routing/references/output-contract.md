@@ -14,8 +14,8 @@ Create `output/editorial-plan.md` with:
 - Supporting items or recurring modules:
 - Required primary-data anchors:
 - Required source count or citation rule:
-- Product-claim route: required | no product claims
-- Defamation or liability route: required | standard review
+- Specialist-claim route: required | standard review | not applicable
+- Legal, safety, or reputational route: required | standard review
 - Draft format and canonical output home:
 - Visual requirement:
 

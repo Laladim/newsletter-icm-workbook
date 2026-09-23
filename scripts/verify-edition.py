@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
 """Verify one newsletter edition and derive its pickup point from files."""
 
 from __future__ import annotations

@@ -1,22 +1,26 @@
 # Visual contract for {{publication_title}}
 
+Source: the approved `publication-brief.md`.
+
 ## Requirement
 
-State whether an edition requires a hero image, chart, illustration, screenshot,
-video module, or no visual at all.
+State `required`, `optional`, or `none`. Name the reader-facing purpose of any
+hero image, chart, illustration, screenshot, or other visual.
 
-## Identity
+## Identity and accessibility
 
-Define the brand system, prohibited colors or compositions, accessibility
-requirements, alt-text standard, and whether readable text is allowed.
+Define the visual system, prohibited treatments, contrast and readability
+requirements, alt-text standard, and whether readable text may appear inside a
+visual. Do not invent a brand system that the owner did not approve.
 
 ## Concept selection
 
-Define how the visual must connect to the edition's actual subject and reader
-consequence. Name the canonical visual skill or procedure in
-`skill-bindings.md`.
+Define how a visual must connect to the edition's subject and reader
+consequence. Name the verified binding in `skill-bindings.md`, or use
+`none:<reason>` when visuals are not required.
 
 ## Inspection
 
-Define the dimensions, crop, likeness, composition, palette, legibility, and
-final-surface checks a human must perform before approval.
+Define dimensions, crop, composition, palette, legibility, accessibility, and
+final-surface checks. A generated file is not accepted until the actual visual
+has been inspected.

@@ -1,12 +1,25 @@
-# Newsletter ICM entry map
+# Newsletter ICM workbook entry
 
-Read `CONTEXT.md`, then the selected publication's `CONTEXT.md`, then the active
-edition stage. Use `scripts/verify-edition.py` to find the first unfinished
-stage. Load only the contracts and skills named by that stage.
+For a new publication, read `SETUP.md` and use
+`NEW-NEWSLETTER-DISCOVERY.md`. Ask one small question group at a time. Keep
+supplied facts, researched evidence, interpretations, and human decisions
+separate.
 
-`Create newsletter` authorizes routine stages when the publication mode permits
-them. It never authorizes scheduling, sending, activating, or publishing. Those
-actions remain with the human named by the publication profile.
+Stop for explicit human approval of the completed `publication-brief.md`
+before generating the six profile contracts. Stop again for explicit profile
+review before stamping the first shadow edition.
 
-Never infer authority from credentials. Never infer workflow state from chat
-memory. The edition's files and receipts are the record.
+Never invent tools, sources, expertise, credentials, or authority. Default to
+`shadow` mode and local Markdown delivery. Platform integrations require a
+separate supervised pilot. Never schedule, send, activate, or publish.
+
+For an already approved profile, read `CONTEXT.md`, then the selected
+publication's `CONTEXT.md`, then the active edition stage. Use
+`scripts/verify-publication.py` and `scripts/verify-edition.py` to derive state
+from files rather than chat memory.
+
+Supported kickoff:
+
+```text
+Read SETUP.md and guide me through creating my newsletter ICM workspace.
+```

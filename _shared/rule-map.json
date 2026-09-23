@@ -8,6 +8,8 @@
     "files": [
       "README.md",
       "START-HERE.md",
+      "SETUP.md",
+      "NEW-NEWSLETTER-DISCOVERY.md",
       "DISCUSSION-GUIDE.md",
       "CONTEXT.md",
       "AGENTS.md",
@@ -22,43 +24,43 @@
   "files": {
     "AGENTS.md": {
       "derives_from": {
-        "CONTEXT.md": "9fe2e3fdb6df",
-        "_shared/safety-contract.md": "b6f0ab4645ec"
+        "CONTEXT.md": "237c6a68acc6",
+        "_shared/safety-contract.md": "62fa894d4e9a"
       }
     },
     "CLAUDE.md": {
       "derives_from": {
-        "CONTEXT.md": "9fe2e3fdb6df",
-        "_shared/safety-contract.md": "b6f0ab4645ec"
+        "CONTEXT.md": "237c6a68acc6",
+        "_shared/safety-contract.md": "62fa894d4e9a"
       }
     },
     "START-HERE.md": {
       "derives_from": {
-        "_shared/safety-contract.md": "b6f0ab4645ec",
-        "_shared/approval-contract.md": "f52f83da4bfb"
+        "_shared/safety-contract.md": "62fa894d4e9a",
+        "_shared/approval-contract.md": "1999da96828b"
       }
     },
     "DISCUSSION-GUIDE.md": {
       "derives_from": {
-        "_shared/safety-contract.md": "b6f0ab4645ec"
+        "_shared/safety-contract.md": "62fa894d4e9a"
       }
     },
     "CONTEXT.md": {
       "derives_from": {
-        "_shared/safety-contract.md": "b6f0ab4645ec",
+        "_shared/safety-contract.md": "62fa894d4e9a",
         "_shared/edition-contract.md": "610f0c26ae3c",
-        "_shared/skill-interface.md": "b05f6e47f133"
+        "_shared/skill-interface.md": "025b85bf9595"
       }
     },
     "_templates/publication/CONTEXT.md": {
       "derives_from": {
-        "_shared/safety-contract.md": "b6f0ab4645ec",
-        "_shared/skill-interface.md": "b05f6e47f133"
+        "_shared/safety-contract.md": "62fa894d4e9a",
+        "_shared/skill-interface.md": "025b85bf9595"
       }
     },
     "_templates/publication/skill-bindings.md": {
       "derives_from": {
-        "_shared/skill-interface.md": "b05f6e47f133"
+        "_shared/skill-interface.md": "025b85bf9595"
       }
     },
     "_templates/edition/CONTEXT.md": {
@@ -113,52 +115,77 @@
     },
     "_templates/edition/01_intake/references/output-contract.md": {
       "derives_from": {
-        "_shared/approval-contract.md": "f52f83da4bfb"
+        "_shared/approval-contract.md": "1999da96828b"
       }
     },
     "_templates/edition/02_source-selection/references/output-contract.md": {
       "derives_from": {
-        "_shared/approval-contract.md": "f52f83da4bfb"
+        "_shared/approval-contract.md": "1999da96828b"
       }
     },
     "_templates/edition/03_research/references/output-contract.md": {
       "derives_from": {
-        "_shared/approval-contract.md": "f52f83da4bfb"
+        "_shared/approval-contract.md": "1999da96828b"
       }
     },
     "_templates/edition/04_routing/references/output-contract.md": {
       "derives_from": {
-        "_shared/approval-contract.md": "f52f83da4bfb"
+        "_shared/approval-contract.md": "1999da96828b"
       }
     },
     "_templates/edition/05_draft/references/output-contract.md": {
       "derives_from": {
-        "_shared/approval-contract.md": "f52f83da4bfb"
+        "_shared/approval-contract.md": "1999da96828b"
       }
     },
     "_templates/edition/06_quality-review/references/output-contract.md": {
       "derives_from": {
-        "_shared/approval-contract.md": "f52f83da4bfb"
+        "_shared/approval-contract.md": "1999da96828b"
       }
     },
     "_templates/edition/07_package/references/output-contract.md": {
       "derives_from": {
-        "_shared/approval-contract.md": "f52f83da4bfb"
+        "_shared/approval-contract.md": "1999da96828b"
       }
     },
     "_templates/edition/08_delivery/references/output-contract.md": {
       "derives_from": {
-        "_shared/approval-contract.md": "f52f83da4bfb"
+        "_shared/approval-contract.md": "1999da96828b"
       }
     },
     "_templates/edition/09_post-publish/references/output-contract.md": {
       "derives_from": {
-        "_shared/approval-contract.md": "f52f83da4bfb"
+        "_shared/approval-contract.md": "1999da96828b"
+      }
+    },
+    "README.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "1999da96828b",
+        "_shared/safety-contract.md": "62fa894d4e9a",
+        "_shared/skill-interface.md": "025b85bf9595"
+      }
+    },
+    "SETUP.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "1999da96828b",
+        "_shared/safety-contract.md": "62fa894d4e9a",
+        "_shared/skill-interface.md": "025b85bf9595"
+      }
+    },
+    "NEW-NEWSLETTER-DISCOVERY.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "1999da96828b",
+        "_shared/safety-contract.md": "62fa894d4e9a"
+      }
+    },
+    "_templates/publication/publication-brief.md": {
+      "derives_from": {
+        "_shared/approval-contract.md": "1999da96828b",
+        "_shared/safety-contract.md": "62fa894d4e9a"
       }
     }
   },
   "independent": [
-    "README.md",
     "_shared/CONTEXT.md",
     "_shared/approval-contract.md",
     "_shared/edition-contract.md",
@@ -178,5 +205,132 @@
     "_templates/publication/source-contract.md",
     "_templates/publication/visual-contract.md"
   ],
-  "blessings": []
+  "blessings": [
+    {
+      "date": "2026-09-23",
+      "file": "AGENTS.md",
+      "dependency": "CONTEXT.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "AGENTS.md",
+      "dependency": "_shared/safety-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "CLAUDE.md",
+      "dependency": "CONTEXT.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "CLAUDE.md",
+      "dependency": "_shared/safety-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "CONTEXT.md",
+      "dependency": "_shared/safety-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "CONTEXT.md",
+      "dependency": "_shared/skill-interface.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "DISCUSSION-GUIDE.md",
+      "dependency": "_shared/safety-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "START-HERE.md",
+      "dependency": "_shared/approval-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "START-HERE.md",
+      "dependency": "_shared/safety-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/edition/01_intake/references/output-contract.md",
+      "dependency": "_shared/approval-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/edition/02_source-selection/references/output-contract.md",
+      "dependency": "_shared/approval-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/edition/03_research/references/output-contract.md",
+      "dependency": "_shared/approval-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/edition/04_routing/references/output-contract.md",
+      "dependency": "_shared/approval-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/edition/05_draft/references/output-contract.md",
+      "dependency": "_shared/approval-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/edition/06_quality-review/references/output-contract.md",
+      "dependency": "_shared/approval-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/edition/07_package/references/output-contract.md",
+      "dependency": "_shared/approval-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/edition/08_delivery/references/output-contract.md",
+      "dependency": "_shared/approval-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/edition/09_post-publish/references/output-contract.md",
+      "dependency": "_shared/approval-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/publication/CONTEXT.md",
+      "dependency": "_shared/safety-contract.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/publication/CONTEXT.md",
+      "dependency": "_shared/skill-interface.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    },
+    {
+      "date": "2026-09-23",
+      "file": "_templates/publication/skill-bindings.md",
+      "dependency": "_shared/skill-interface.md",
+      "reason": "Reviewed every shared-rule consumer after adding the two setup approval gates, shadow-only default, and verifiable capability bindings; updated files already carry the required behavior and edition output contracts remain compatible."
+    }
+  ]
 }

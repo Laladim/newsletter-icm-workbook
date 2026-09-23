@@ -1,24 +1,33 @@
 # Source contract for {{publication_title}}
 
+Source: the approved `publication-brief.md`. Do not invent a source because it
+would be convenient.
+
 ## Approved sources
 
-List canonical internal and external sources, what each owns, and how freshness
-is verified. Name credentials by authorized route only; never store secrets in
-this profile.
+List each approved source class, what it can establish, its access route, and
+how freshness is verified. Store no credentials or secret values here.
 
 ## Source hierarchy
 
-Rank primary authority, independent reporting, interested material, and weak or
-disallowed sources for this publication's domain.
+Rank primary authority, independent reporting or analysis, interested
+material, community or anecdotal material, and weak or disallowed sources for
+this publication's domain.
 
 ## Required checks
 
-Define duplication checks, prior-coverage checks, URL or file opening, exact
-number and quotation verification, contrary-evidence search, and any minimum
-corroboration requirement.
+- Date, identity, and canonical-location readback: replace.
+- Freshness and prior-coverage check: replace.
+- Duplication check: replace.
+- Required primary anchor: replace.
+- Minimum independent corroboration: replace.
+- Contrary-evidence search: replace.
+- Exact number and quotation verification: replace.
+- Specialist review trigger: replace.
+- Approved risk tolerance: replace.
 
 ## Citation and evidence record
 
-Define the source-ledger fields needed to trace every load-bearing claim back to
-the opened source. Define what happens when evidence is missing, contradictory,
-stale, or inaccessible.
+Define the source-ledger fields that trace every load-bearing claim back to an
+opened source. Define what happens when evidence is missing, contradictory,
+stale, inaccessible, or outside the owner's risk tolerance.

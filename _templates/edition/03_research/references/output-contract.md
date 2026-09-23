@@ -15,11 +15,11 @@ Create both `output/research-packet.md` and `output/source-ledger.md`.
 
 ### Detailed analysis
 ### Specific implications for the publication audience
-### Key numbers, names, dates, and regulatory details
+### Key numbers, names, dates, and domain-specific details
 ### Broader context and contrary evidence
 ### What readers should watch for or do differently
-### Alt-lender rating and full rationale
-### Relevance rating and recommendation
+### Audience relevance assessment and full rationale
+### Recommendation and confidence limits
 ### Supported claims
 ### Unsupported, qualified, or unresolved claims
 ```

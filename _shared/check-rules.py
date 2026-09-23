@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
 """Catch a rule that changed in one file and not the others.
 
 This is the generalized copy of the checker first written for

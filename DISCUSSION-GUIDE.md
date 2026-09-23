@@ -1,65 +1,44 @@
-# Newsletter workflow discussion guide
+# Newsletter workflow conversation guide
 
-Use this guide for a discovery or walkthrough conversation with a newsletter
-owner.
+Use this short guide when explaining the workbook to a publication owner or
+team. Use `NEW-NEWSLETTER-DISCOVERY.md` for the actual interview.
 
 ## Simple explanation
 
-This folder turns a newsletter process into a visible path. Each edition has
-nine stages of work, and every completed stage leaves evidence behind. The team
-does not have to trust chat history or remember where an agent stopped.
+This repository turns a newsletter process into a visible path. The publication
+profile records stable decisions. Each edition has nine stages, and every
+completed stage leaves evidence behind. No one needs chat history to learn what
+was decided or where work stopped.
 
-## Questions to ask before configuring it
+## The two setup gates
 
-### Publication
+1. The owner approves the complete publication brief.
+2. The owner reviews the six generated profile contracts before the first
+   shadow edition.
 
-- Who is the newsletter for?
-- What useful promise does every edition make?
-- What is the normal cadence?
-- What does a strong edition look like?
-
-### Sources and editorial judgment
-
-- Where do topics come from?
-- Which sources are acceptable or unacceptable?
-- How fresh must information be?
-- Who decides the lead story when several qualify?
-
-### Production
-
-- What structure repeats in every edition?
-- Which claims require legal, compliance, or specialist review?
-- Are visuals required?
-- Where should drafts and final assets live?
-
-### Delivery and authority
-
-- Which email platform is used?
-- What exact surface does the owner review?
-- Who may create a draft?
-- Who alone may schedule, send, or publish?
-
-### Learning after publication
-
-- Which metrics matter: delivery, unique opens, click rate, conversions, or replies?
-- When are metrics captured so comparisons use the same time window?
-- Which topic categories should be compared?
-- How many editions are required before changing the topic strategy?
+These gates are intentional. They protect the expensive downstream work from a
+wrong audience, promise, position, evidence standard, or authority boundary.
 
 ## Recommended adoption conversation
 
-1. Map the current process without changing it.
-2. Configure one publication profile.
-3. Produce one shadow edition and compare it with the current result.
-4. Fix missing rules or weak gates.
-5. Run one supervised live edition.
-6. Verify the unsent draft, human publication boundary, and post-publish data.
-7. Let the owner approve or reject production cutover.
+1. Describe the intended audience and reader problem.
+2. Agree on the recurring promise, positioning, scope, and risk tolerance.
+3. Map evidence, voice, format, cadence, visuals, reader action, ownership, and
+   metrics.
+4. Approve the publication brief.
+5. Generate and review the tailored profile.
+6. Produce one local shadow edition and compare it with the intended reader
+   experience.
+7. Fix missing rules or weak gates.
+8. Consider one separately approved supervised platform pilot.
 
-## What the system should never imply
+## What the system must never imply
 
-- A high open rate from one edition proves a permanent topic winner.
+- A plausible audience description is an approved audience choice.
+- An agent's interpretation is a supplied fact.
+- A named tool or connector exists unless it can be verified.
 - Tool access means permission to publish.
-- A successful script means the final newsletter is correct.
-- Chat memory is the source of workflow status.
-- A generic template replaces the publication owner's voice or judgment.
+- One edition or one metric proves a permanent strategy.
+- A generic example defines a new publication's voice or source rules.
+- A successful script means the final reader surface is correct.
+- Chat memory is the source of workflow state.

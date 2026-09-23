@@ -1,8 +1,61 @@
 # Start here
 
-## What this gives you
+You do not need to understand the folder structure before using this workbook.
+Choose one path below.
 
-One newsletter edition moves through nine visible stages:
+## Guided path with Claude Code or Codex
+
+1. Clone or download this repository.
+2. Open the repository folder in Claude Code or Codex.
+3. Paste this exact instruction:
+
+```text
+Read SETUP.md and guide me through creating my newsletter ICM workspace.
+```
+
+The agent will ask a few questions at a time. It will prepare a publication
+brief, stop for your approval, generate the tailored profile, and stop again
+for your profile review. It may not proceed past either stop on its own.
+
+## Workbook-only path
+
+1. Read `NEW-NEWSLETTER-DISCOVERY.md`.
+2. Answer each section using the four evidence labels:
+   `Supplied fact`, `Researched evidence`, `Interpretation`, and
+   `Human decision`.
+3. Turn the answers into `publication-brief.md`.
+4. Approve or revise the completed brief before any contracts are generated.
+5. Use `SETUP.md` as the generation checklist.
+
+## What you will decide
+
+Only you may decide:
+
+- who the publication serves;
+- its recurring editorial promise;
+- its positioning and point of view;
+- its risk tolerance;
+- whether the generated profile is accepted; and
+- who may schedule, send, activate, or publish.
+
+An agent may organize answers, research evidence you authorize, identify gaps,
+and draft files. It may not invent your history, expertise, sources, tools,
+permissions, or decisions.
+
+## Safe first run
+
+Every profile begins in `shadow` mode with local Markdown delivery. A shadow
+run can exercise intake, source selection, research, routing, drafting, review,
+packaging, and a simulated local delivery surface. It does not connect to or
+write to an email platform.
+
+Only consider a platform adapter after the profile and shadow edition pass.
+Treat that connection as a separate supervised pilot with an explicit scope,
+readback, rollback route, and human publishing boundary.
+
+## How progress works
+
+Each edition follows nine folders in order:
 
 1. Intake
 2. Source selection
@@ -11,61 +64,29 @@ One newsletter edition moves through nine visible stages:
 5. Draft
 6. Quality review
 7. Package
-8. Delivery to a human review surface
-9. Post-publish records and performance learning
+8. Delivery
+9. Post-publish records and learning
 
-Every stage has its own instructions, expected outputs, and completion receipt.
-If a session stops, the next person or agent reads the files and continues from
-the first unfinished stage.
+Each completed stage leaves files and a receipt. If work stops, the next person
+or agent runs the verifier and resumes from the first unfinished stage.
 
-## Set up your publication
+## Quick checks
 
-From this folder, run:
-
-```bash
-python3 scripts/stamp.py publication --id your-newsletter --title "Your Newsletter"
-```
-
-Then configure these files under `publications/your-newsletter/`:
-
-- `CONTEXT.md`: owner, audience, promise, cadence, authority, and mode
-- `editorial-contract.md`: voice, structure, and quality standard
-- `source-contract.md`: approved sources and evidence rules
-- `visual-contract.md`: image requirements and review standard
-- `delivery-contract.md`: platform, draft surface, readback, and rollback
-- `skill-bindings.md`: the actual tools or procedures used at each stage
-
-Start in `shadow` mode. Shadow mode produces local work and proves the process
-without changing a live newsletter account.
-
-## Create an edition
+After profile generation:
 
 ```bash
-python3 scripts/stamp.py edition --publication your-newsletter --date 2026-09-01
+python3 scripts/verify-publication.py publications/your-newsletter
 ```
 
-Tell your agent:
-
-```text
-Create the newsletter. Use the publication profile and continue automatically
-while each stage passes. Stop before scheduling, sending, or publishing.
-```
-
-Check progress with:
+After stamping or continuing an edition:
 
 ```bash
-python3 scripts/verify-edition.py editions/2026-09-01-your-newsletter
+python3 scripts/verify-edition.py editions/YYYY-MM-DD-your-newsletter
 ```
 
-## Move toward live use safely
+For the whole workbook:
 
-Use three modes:
-
-- `shadow`: local-only practice and comparison
-- `supervised-pilot`: one precisely approved live test
-- `production`: standing permission for configured routine writes
-
-Before production, compare a shadow edition with the current workflow, run one
-supervised live edition, verify the final draft and post-publish records, and
-record the owner's cutover decision. Tool access never grants schedule, send,
-or publish authority.
+```bash
+python3 _shared/check-rules.py
+python3 scripts/verify-template.py
+```

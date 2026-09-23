@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+
+# Publication profiles and edition records may contain private operating data.
+publications/*
+!publications/.gitkeep
+editions/*
+!editions/.gitkeep
+
+# Local exports used to create public Google companion files.
+.artifacts/
