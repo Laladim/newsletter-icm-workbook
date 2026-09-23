@@ -66,8 +66,8 @@ The Google Doc combines the discovery workbook and setup guide. The Google
 Sheet mirrors `FILE-BUILD-MAP.csv`. GitHub remains canonical, and each Google
 file displays source version `v1.0.0` plus make-a-copy instructions.
 
-Links are published in this section after the native Google files pass content,
-permission, and exact-range readback.
+- [Discovery and setup guide, view only](https://docs.google.com/document/d/1vF7u3wKQEFoMHsKJEDZEKC0rmmoy-tur4YLxYlIx74Q/edit) ([make a copy](https://docs.google.com/document/d/1vF7u3wKQEFoMHsKJEDZEKC0rmmoy-tur4YLxYlIx74Q/copy))
+- [File build map, view only](https://docs.google.com/spreadsheets/d/17ZTncp2vIgivSa0om0b7UjHOYMYDSvdcsErto42PXMc/edit) ([make a copy](https://docs.google.com/spreadsheets/d/17ZTncp2vIgivSa0om0b7UjHOYMYDSvdcsErto42PXMc/copy))
 
 ## What is canonical
 

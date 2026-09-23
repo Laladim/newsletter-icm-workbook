@@ -101,6 +101,12 @@ CLASSIFICATIONS = {
     "Optional",
     "Never publish",
 }
+PUBLIC_COMPANION_URLS = [
+    "https://docs.google.com/document/d/1vF7u3wKQEFoMHsKJEDZEKC0rmmoy-tur4YLxYlIx74Q/edit",
+    "https://docs.google.com/document/d/1vF7u3wKQEFoMHsKJEDZEKC0rmmoy-tur4YLxYlIx74Q/copy",
+    "https://docs.google.com/spreadsheets/d/17ZTncp2vIgivSa0om0b7UjHOYMYDSvdcsErto42PXMc/edit",
+    "https://docs.google.com/spreadsheets/d/17ZTncp2vIgivSa0om0b7UjHOYMYDSvdcsErto42PXMc/copy",
+]
 
 
 def public_files() -> list[Path]:
@@ -181,6 +187,9 @@ def main() -> int:
     readme = (ROOT / "README.md").read_text() if (ROOT / "README.md").is_file() else ""
     if version and f"newsletter-icm-workbook:v{version}" not in readme:
         errors.append("README live marker does not match VERSION")
+    for url in PUBLIC_COMPANION_URLS:
+        if url not in readme:
+            errors.append(f"README is missing public companion URL: {url}")
 
     edition = ROOT / "_templates" / "edition"
     for stage in STAGES:
