@@ -22,7 +22,8 @@ or a new computer all resume the same way.
 |---|---|---|
 | `FAIL Python` | Python is older than 3.9 | Install Python 3.9 or newer |
 | `FAIL Workbook files` | Incomplete download | Clone or download the full repository again |
-| `WARN AI coding agent` | Claude Code or Codex is not on the command path | Install one, or use the workbook-only path. For Claude Code install errors see the official [troubleshooting page](https://code.claude.com/docs/en/troubleshoot-install) |
+| `WARN AI coding agent` | No Claude Code or Codex command or editor extension was found | Expected if you use the Claude desktop app's Code tab. Otherwise install one (see `WAYS-TO-RUN.md`), or use the workbook-only path. For Claude Code install errors see the official [troubleshooting page](https://code.claude.com/docs/en/troubleshoot-install) |
+| `python3` is not recognized, or opens the Microsoft Store (Windows) | Windows uses a different Python command | Type `python` or `py` instead; see `WAYS-TO-RUN.md` |
 | `WARN Git` | Git is not installed | Download updates as a zip, or install Git |
 | `FAIL End-to-end run` | The smoke test failed on this computer | Run `python3 scripts/smoke-test.py` and read its last lines |
 
@@ -70,6 +71,8 @@ or a new computer all resume the same way.
 | The agent moved past the brief or profile gate without your approval | Stop it, rerun `verify-publication.py`, and approve only the exact brief or profile you read |
 | The agent says it is done but the verifier fails | The verifier wins. Return to the reported stage |
 | You only have a chat app (for example Claude Cowork) | Use the workbook-only path in `START-HERE.md` |
+| `/newsletter-setup` is not in the `/` menu (for example in the VS Code extension) | Paste the kickoff sentence from `START-HERE.md`; it does the same thing |
+| Your brief or editions disappeared after a cloud session | They are kept out of Git on purpose. Run setup in a tool on your own computer; see `WAYS-TO-RUN.md` |
 
 ## See a finished sample
 

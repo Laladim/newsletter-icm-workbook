@@ -1,4 +1,4 @@
-<!-- newsletter-icm-workbook:v1.1.0 -->
+<!-- newsletter-icm-workbook:v1.2.0 -->
 # Newsletter ICM Workbook
 
 Build a newsletter workflow whose decisions, evidence, and progress live in
@@ -37,6 +37,10 @@ profile, or publishing authority for you.
 
 Prefer a workbook-only path? Start with [START-HERE.md](START-HERE.md) and then
 complete [NEW-NEWSLETTER-DISCOVERY.md](NEW-NEWSLETTER-DISCOVERY.md).
+
+Using VS Code, Cursor, JetBrains, the Claude desktop app, Codex, or Windows?
+[WAYS-TO-RUN.md](WAYS-TO-RUN.md) shows how to start in each one and which were
+tested.
 
 ## Deploying for someone else
 
@@ -77,9 +81,11 @@ The Google Doc combines the discovery workbook and setup guide. The Google
 Sheet mirrors `FILE-BUILD-MAP.csv`. GitHub remains canonical, and each Google
 file displays source version `v1.0.0` plus make-a-copy instructions.
 Version 1.1.0 changed only GitHub files: the preflight check, shared Claude
-Code settings, the `deploy/` folder, and troubleshooting. The discovery and
+Code settings, the `deploy/` folder, and troubleshooting. Version 1.2.0 added
+`WAYS-TO-RUN.md` and editor detection in the preflight check. The discovery and
 setup guide did not change, so the Google Doc still matches. The Sheet does not
-list the files added in 1.1.0; `FILE-BUILD-MAP.csv` is complete.
+list the files added in 1.1.0 or 1.2.0 (`WAYS-TO-RUN.md`); `FILE-BUILD-MAP.csv`
+is complete.
 
 - [Discovery and setup guide, view only](https://docs.google.com/document/d/1vF7u3wKQEFoMHsKJEDZEKC0rmmoy-tur4YLxYlIx74Q/edit) ([make a copy](https://docs.google.com/document/d/1vF7u3wKQEFoMHsKJEDZEKC0rmmoy-tur4YLxYlIx74Q/copy))
 - [File build map, view only](https://docs.google.com/spreadsheets/d/17ZTncp2vIgivSa0om0b7UjHOYMYDSvdcsErto42PXMc/edit) ([make a copy](https://docs.google.com/spreadsheets/d/17ZTncp2vIgivSa0om0b7UjHOYMYDSvdcsErto42PXMc/copy))

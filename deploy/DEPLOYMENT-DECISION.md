@@ -63,7 +63,7 @@ settings.
 | Gap | When you notice it | What to do |
 |---|---|---|
 | Your tool cannot run Python scripts | `scripts/preflight.py` cannot start | Use the workbook-only path; ask someone with a coding agent to run the verifiers |
-| No Claude Code or Codex installed | Preflight shows WARN for the AI coding agent | Install one, or use the workbook-only path |
+| No Claude Code or Codex installed | Preflight shows WARN for the AI coding agent | Install one, or use the workbook-only path. Each tool's start steps and test status are in `WAYS-TO-RUN.md` |
 | No Git | Preflight shows WARN for Git | Download the repository as a zip; download it again for updates |
 | Native Windows without WSL 2 | You want Claude Code's sandbox | The workbook runs on native Windows (tested in CI). Claude Code's sandbox needs WSL 2; see [sandboxing](https://code.claude.com/docs/en/sandboxing) |
 | Codex instead of Claude Code | You open the folder in Codex | Codex does not read `.claude/settings.json`, so the shared permission rules below do not apply. The two human gates and the verifiers still do |

@@ -10,6 +10,10 @@ ChatGPT plan that includes Codex or an OpenAI API key. The workbook needs no
 API key, connector, or MCP server of its own. Details and model choices per
 stage are in `deploy/DEPLOYMENT-DECISION.md`.
 
+Using VS Code, Cursor, JetBrains, the Claude desktop app, or Codex? See
+`WAYS-TO-RUN.md` for how to open the folder and start in each one. On Windows,
+type `python` or `py` wherever this workbook says `python3`.
+
 ## Guided path with Claude Code or Codex
 
 1. Clone or download this repository.
@@ -18,7 +22,8 @@ stage are in `deploy/DEPLOYMENT-DECISION.md`.
 3. Open the repository folder in Claude Code or Codex. If Claude Code asks
    whether you trust this folder, accept so the workbook's shared settings
    apply.
-4. Paste this exact instruction, or in Claude Code type `/newsletter-setup`:
+4. Paste this exact instruction, or in Claude Code type `/newsletter-setup`
+   (if your tool's `/` menu does not show it, paste the instruction):
 
 ```text
 Read SETUP.md and guide me through creating my newsletter ICM workspace.

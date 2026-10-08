@@ -6,7 +6,7 @@ Run from the repository root before the guided setup:
 
     python3 scripts/preflight.py
 
-Each check prints PASS, WARN, or FAIL with the next step. Only a FAIL stops
+On Windows, type `python` or `py` instead of `python3`. Each check prints PASS, WARN, or FAIL with the next step. Only a FAIL stops
 setup. The last check runs the fictional smoke test, so a pass proves the
 workbook runs end to end here, not just that files exist.
 """
@@ -22,6 +22,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 MINIMUM_PYTHON = (3, 9)
 AGENTS = {"claude": "Claude Code", "codex": "Codex"}
+# Extension folders of VS Code-style editors, and the agent extension IDs from
+# the Visual Studio Marketplace.
+EDITORS = {".vscode": "VS Code", ".vscode-insiders": "VS Code Insiders", ".cursor": "Cursor"}
+EXTENSIONS = {"anthropic.claude-code-": "Claude Code extension", "openai.chatgpt-": "Codex extension"}
 
 
 def report(status: str, check: str, detail: str) -> None:
@@ -47,16 +51,39 @@ def check_repository() -> bool:
     return True
 
 
+def editor_agents(home: Path) -> list[str]:
+    """Name the agent extensions installed in VS Code-style editors."""
+    found = []
+    for folder, editor in EDITORS.items():
+        extensions = home / folder / "extensions"
+        if not extensions.is_dir():
+            continue
+        names = [entry.name.lower() for entry in extensions.iterdir()]
+        for prefix, label in EXTENSIONS.items():
+            if any(name.startswith(prefix) for name in names):
+                found.append(f"{label} in {editor}")
+    return found
+
+
 def check_agent() -> None:
     found = [label for command, label in AGENTS.items() if shutil.which(command)]
     if found:
         report("PASS", "AI coding agent", f"{' and '.join(found)} found")
         return
+    in_editors = editor_agents(Path.home())
+    if in_editors:
+        report(
+            "PASS",
+            "AI coding agent",
+            f"{' and '.join(in_editors)} found; open this folder in that editor (see WAYS-TO-RUN.md)",
+        )
+        return
     report(
         "WARN",
         "AI coding agent",
-        "neither Claude Code nor Codex is on this computer's command path; "
-        "install one for the guided path, or use the workbook-only path in START-HERE.md",
+        "no Claude Code or Codex command or editor extension found. If you use the Claude desktop "
+        "app's Code tab, this is expected; see WAYS-TO-RUN.md. Otherwise install "
+        "one for the guided path, or use the workbook-only path in START-HERE.md",
     )
 
 
