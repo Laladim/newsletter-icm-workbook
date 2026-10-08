@@ -161,3 +161,10 @@ Checked on 9 October 2026 against the official
 - Provider certifications are in the [Anthropic Trust Center](https://trust.anthropic.com).
   They describe the provider's controls. Your stage receipts prove what your
   own run did; neither replaces the other.
+
+## 11. Measurement
+
+Use `deploy/PILOT-SCORECARD.md` for every new operator. Record the baseline
+before the first run, record times when they happen, and count only editions
+the owner accepted. Usage analytics, compliance feeds, OpenTelemetry, and
+audit logs are organization tools; a single operator does not need them.
