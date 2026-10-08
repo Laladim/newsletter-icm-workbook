@@ -54,6 +54,7 @@ SCRIPTS = [
     "scripts/verify-edition.py",
     "scripts/verify-template.py",
     "scripts/smoke-test.py",
+    "scripts/preflight.py",
     "_shared/check-rules.py",
 ]
 FORBIDDEN_PUBLIC_TERMS = [

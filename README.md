@@ -50,6 +50,7 @@ complete [NEW-NEWSLETTER-DISCOVERY.md](NEW-NEWSLETTER-DISCOVERY.md).
 ## Commands
 
 ```bash
+python3 scripts/preflight.py
 python3 scripts/stamp.py publication --id your-newsletter --title "Your Newsletter"
 python3 scripts/stamp.py contracts --publication your-newsletter
 python3 scripts/verify-publication.py publications/your-newsletter

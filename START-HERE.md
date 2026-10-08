@@ -3,14 +3,17 @@
 You do not need to understand the folder structure before using this workbook.
 Choose one path below.
 
-Before you start: you need Python 3 and either Claude Code or Codex signed in
-on your own account. The workbook needs no API key, connector, or MCP server.
+Before you start: you need Python 3.9 or newer and either Claude Code or Codex
+signed in on your own account. The workbook needs no API key, connector, or
+MCP server.
 
 ## Guided path with Claude Code or Codex
 
 1. Clone or download this repository.
-2. Open the repository folder in Claude Code or Codex.
-3. Paste this exact instruction:
+2. In the repository folder, run `python3 scripts/preflight.py`. Fix any
+   FAIL line before you continue.
+3. Open the repository folder in Claude Code or Codex.
+4. Paste this exact instruction:
 
 ```text
 Read SETUP.md and guide me through creating my newsletter ICM workspace.
