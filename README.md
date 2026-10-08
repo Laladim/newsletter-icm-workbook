@@ -1,4 +1,4 @@
-<!-- newsletter-icm-workbook:v1.0.0 -->
+<!-- newsletter-icm-workbook:v1.1.0 -->
 # Newsletter ICM Workbook
 
 Build a newsletter workflow whose decisions, evidence, and progress live in
@@ -76,6 +76,10 @@ guide explains when each command is allowed.
 The Google Doc combines the discovery workbook and setup guide. The Google
 Sheet mirrors `FILE-BUILD-MAP.csv`. GitHub remains canonical, and each Google
 file displays source version `v1.0.0` plus make-a-copy instructions.
+Version 1.1.0 changed only GitHub files: the preflight check, shared Claude
+Code settings, the `deploy/` folder, and troubleshooting. The discovery and
+setup guide did not change, so the Google Doc still matches. The Sheet does not
+list the files added in 1.1.0; `FILE-BUILD-MAP.csv` is complete.
 
 - [Discovery and setup guide, view only](https://docs.google.com/document/d/1vF7u3wKQEFoMHsKJEDZEKC0rmmoy-tur4YLxYlIx74Q/edit) ([make a copy](https://docs.google.com/document/d/1vF7u3wKQEFoMHsKJEDZEKC0rmmoy-tur4YLxYlIx74Q/copy))
 - [File build map, view only](https://docs.google.com/spreadsheets/d/17ZTncp2vIgivSa0om0b7UjHOYMYDSvdcsErto42PXMc/edit) ([make a copy](https://docs.google.com/spreadsheets/d/17ZTncp2vIgivSa0om0b7UjHOYMYDSvdcsErto42PXMc/copy))
