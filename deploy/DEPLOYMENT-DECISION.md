@@ -111,3 +111,18 @@ open the workbook.
 `/newsletter-setup` is a Claude Code skill in `.claude/skills/`. Only you can
 run it; the agent cannot start it on its own. It sends the same kickoff
 sentence as `START-HERE.md`.
+
+## 8. Extensions: connectors, skills, hooks, subagents, plugins
+
+Add an extension only when a real stage needs it, and record it in the
+publication's `skill-bindings.md` using a form from
+`_shared/skill-interface.md`. The publication verifier rejects a binding that
+names a tool that does not exist; the smoke test proves that rejection.
+
+| Extension | Decision for this workbook | Source |
+|---|---|---|
+| MCP connectors | None in shadow mode. Every MCP tool asks first (section 7). A later live integration is recorded as a `command:` or `local:` adapter whose own contract proves the connection, inside a supervised pilot | `_shared/skill-interface.md`; [permissions](https://code.claude.com/docs/en/permissions) |
+| Skills | One user-only skill, `/newsletter-setup`, that sends the kickoff and copies no procedure | [skills](https://code.claude.com/docs/en/slash-commands) |
+| Hooks | None shipped. Deny rules already stop an action before it runs, and a PostToolUse hook runs only after the tool already ran, so it could detect but not prevent. Stage gates stay in the verifiers | [hooks](https://code.claude.com/docs/en/hooks) |
+| Subagents | Optional in Stage 03. Use parallel subagents only for candidates whose research does not depend on each other. The main agent writes the one `research-packet.md` and `source-ledger.md` and runs the gate; a subagent never writes a stage receipt | [subagents](https://code.claude.com/docs/en/sub-agents) |
+| Plugin | Not packaged. The repository is the package until a second operator proves a plugin would help | Owner decision |
