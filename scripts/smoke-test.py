@@ -4,6 +4,7 @@
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import shutil
 import subprocess
@@ -380,6 +381,13 @@ def assert_cold_start(root: Path) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Run a fictional cold-start publication and local shadow edition.")
+    parser.add_argument("--keep", metavar="DIR", help="copy the finished fictional edition to DIR for reading")
+    args = parser.parse_args()
+    keep = Path(args.keep).resolve() if args.keep else None
+    if keep is not None and keep.exists():
+        print(f"--keep target already exists: {keep}")
+        return 1
     temp_root = Path("/private/tmp")
     if not temp_root.is_dir():
         temp_root = Path(tempfile.gettempdir())
@@ -551,6 +559,9 @@ def main() -> int:
                         )
         print("Fictional local shadow edition through Stage 08: passed")
         print("Unrelated publication-assumption scan: clean")
+        if keep is not None:
+            shutil.copytree(sandbox / "editions" / EDITION_ID, keep)
+            print(f"Fictional edition kept for reading: {keep}")
 
     print("SMOKE TEST PASSED")
     return 0

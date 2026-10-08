@@ -13,3 +13,6 @@ editions/*
 
 # Local exports used to create public Google companion files.
 .artifacts/
+
+# Fictional edition kept by smoke-test.py --keep for reading.
+sample-edition/
