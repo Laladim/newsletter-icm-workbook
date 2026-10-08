@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(publications/**)",
+      "Edit(editions/**)",
+      "Bash(python3 scripts/preflight.py *)",
+      "Bash(python3 scripts/stamp.py *)",
+      "Bash(python3 scripts/verify-publication.py *)",
+      "Bash(python3 scripts/verify-edition.py *)",
+      "Bash(python3 scripts/verify-template.py *)",
+      "Bash(python3 scripts/smoke-test.py *)",
+      "Bash(python3 _shared/check-rules.py *)"
+    ],
+    "ask": [
+      "mcp__*"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Bash(git push *)"
+    ]
+  }
+}

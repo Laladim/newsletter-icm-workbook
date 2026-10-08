@@ -15,8 +15,10 @@ stage are in `deploy/DEPLOYMENT-DECISION.md`.
 1. Clone or download this repository.
 2. In the repository folder, run `python3 scripts/preflight.py`. Fix any
    FAIL line before you continue.
-3. Open the repository folder in Claude Code or Codex.
-4. Paste this exact instruction:
+3. Open the repository folder in Claude Code or Codex. If Claude Code asks
+   whether you trust this folder, accept so the workbook's shared settings
+   apply.
+4. Paste this exact instruction, or in Claude Code type `/newsletter-setup`:
 
 ```text
 Read SETUP.md and guide me through creating my newsletter ICM workspace.

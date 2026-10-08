@@ -66,6 +66,7 @@ settings.
 | No Claude Code or Codex installed | Preflight shows WARN for the AI coding agent | Install one, or use the workbook-only path |
 | No Git | Preflight shows WARN for Git | Download the repository as a zip; download it again for updates |
 | Native Windows without WSL 2 | You want Claude Code's sandbox | The workbook runs on native Windows (tested in CI). Claude Code's sandbox needs WSL 2; see [sandboxing](https://code.claude.com/docs/en/sandboxing) |
+| Codex instead of Claude Code | You open the folder in Codex | Codex does not read `.claude/settings.json`, so the shared permission rules below do not apply. The two human gates and the verifiers still do |
 | No live platform delivery | You want the edition in your email platform | Shadow mode delivers local Markdown only. A platform connection is a separate supervised pilot with its own scope, readback, and rollback |
 
 ## 5. Network
@@ -88,3 +89,25 @@ No gateway or proxy is needed for one operator.
 - Anything your AI coding agent reads is sent to its provider under your
   account's terms. Do not put customer, health, or other confidential material
   into a publication unless your account's data terms allow it.
+
+## 7. Shared Claude Code settings
+
+The repository ships `.claude/settings.json`, so every operator who opens the
+folder in Claude Code gets the same rules. Rule syntax follows the official
+[permissions page](https://code.claude.com/docs/en/permissions).
+
+| Rule | Type | Why |
+|---|---|---|
+| Edit files in `publications/` and `editions/` | allow | Newsletter work belongs there; edits elsewhere ask first |
+| Run the workbook's own scripts | allow | Stamping and verifying should not interrupt the operator |
+| Any MCP connector tool | ask | Shadow mode needs no connector, so any use gets a human look |
+| Read `.env` or `.env.*` | deny | Keeps passwords and keys away from the agent |
+| `git push` | deny | Only the human decides what reaches GitHub |
+
+Claude Code applies the deny and ask rules at once. It ignores the allow rules
+until you accept the folder's trust prompt, so accept it the first time you
+open the workbook.
+
+`/newsletter-setup` is a Claude Code skill in `.claude/skills/`. Only you can
+run it; the agent cannot start it on its own. It sends the same kickoff
+sentence as `START-HERE.md`.
