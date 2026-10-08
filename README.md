@@ -38,6 +38,16 @@ profile, or publishing authority for you.
 Prefer a workbook-only path? Start with [START-HERE.md](START-HERE.md) and then
 complete [NEW-NEWSLETTER-DISCOVERY.md](NEW-NEWSLETTER-DISCOVERY.md).
 
+## Deploying for someone else
+
+Handing the workbook to a new newsletter owner? Use the `deploy/` folder:
+
+- `deploy/DEPLOYMENT-DECISION.md`: access and plans, model per stage, route,
+  known gaps, data location, shared settings, and each safety control.
+- `deploy/HANDOFF.md`: fit check, pilot design, 30-day rollout, maintainer,
+  and closeout.
+- `deploy/PILOT-SCORECARD.md`: baseline and measures for Day 30.
+
 ## Safety defaults
 
 - Every new publication starts in `shadow` mode.
