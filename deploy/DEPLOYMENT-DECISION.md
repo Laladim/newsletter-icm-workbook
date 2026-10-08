@@ -42,3 +42,49 @@ verifier would reject.
 
 Adjust from evidence: if a lighter-model stage fails its verifier twice on the
 same edition, move that stage to the strongest model and note it here.
+
+## 3. Route decision
+
+Default route: one operator, on their own account, on their own computer, in
+`shadow` mode. Nothing is sent or published from the workbook.
+
+The fact that changes the route: if your organization allows only a chat app
+and no terminal or coding agent, use the workbook-only path in `START-HERE.md`.
+You answer the discovery workbook and write the publication brief by hand, and
+someone with a coding agent can generate the profile from your approved brief.
+
+A second fact that changes who decides: if your organization manages Claude
+Code centrally (Team or Enterprise with managed settings), your administrator
+owns tool permissions. The workbook's gates still apply on top of those
+settings.
+
+## 4. Known capability gaps
+
+| Gap | When you notice it | What to do |
+|---|---|---|
+| Your tool cannot run Python scripts | `scripts/preflight.py` cannot start | Use the workbook-only path; ask someone with a coding agent to run the verifiers |
+| No Claude Code or Codex installed | Preflight shows WARN for the AI coding agent | Install one, or use the workbook-only path |
+| No Git | Preflight shows WARN for Git | Download the repository as a zip; download it again for updates |
+| Native Windows without WSL 2 | You want Claude Code's sandbox | The workbook runs on native Windows (tested in CI). Claude Code's sandbox needs WSL 2; see [sandboxing](https://code.claude.com/docs/en/sandboxing) |
+| No live platform delivery | You want the edition in your email platform | Shadow mode delivers local Markdown only. A platform connection is a separate supervised pilot with its own scope, readback, and rollback |
+
+## 5. Network
+
+The workbook's scripts work offline. Your AI coding agent needs internet
+access to reach its provider. Behind a corporate proxy or firewall, ask your IT
+team to follow the agent's network guide, for example
+[Claude Code network configuration](https://code.claude.com/docs/en/network-config).
+No gateway or proxy is needed for one operator.
+
+## 6. Where your data lives
+
+- Your real publication and edition folders stay on your computer. The
+  repository's `.gitignore` already keeps `publications/` and `editions/` out
+  of Git.
+- For a backup, use a separate private repository. Never push real
+  publications or editions to a public copy of this workbook.
+- Never put passwords, API keys, or tokens in any workbook file. The template
+  verifier and smoke test reject credential-like values.
+- Anything your AI coding agent reads is sent to its provider under your
+  account's terms. Do not put customer, health, or other confidential material
+  into a publication unless your account's data terms allow it.
