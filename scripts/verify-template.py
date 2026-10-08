@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import csv
 import fnmatch
+import json
 import re
 import subprocess
 import sys
@@ -82,6 +83,10 @@ SECRET_PATTERNS = [
     re.compile(r"\bAIza[0-9A-Za-z_-]{20,}\b"),
     re.compile(r"\bya29\.[0-9A-Za-z_-]{20,}\b"),
 ]
+REQUIRED_PERMISSIONS = {
+    "ask": ["mcp__*"],
+    "deny": ["Read(./.env)", "Read(./.env.*)", "Bash(git push *)"],
+}
 MAP_COLUMNS = [
     "path",
     "purpose",
@@ -263,6 +268,17 @@ def main() -> int:
                         f"generic workflow inherits publication assumption in "
                         f"{path.relative_to(ROOT)}: {token}"
                     )
+
+    settings_path = ROOT / ".claude" / "settings.json"
+    try:
+        permissions = json.loads(settings_path.read_text()).get("permissions", {})
+    except (OSError, ValueError) as exc:
+        errors.append(f"shared Claude Code settings unreadable: {exc}")
+        permissions = {}
+    for kind, required in REQUIRED_PERMISSIONS.items():
+        for rule in required:
+            if rule not in permissions.get(kind, []):
+                errors.append(f"shared Claude Code settings lost required {kind} rule: {rule}")
 
     verify_map_coverage(errors)
 

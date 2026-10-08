@@ -126,3 +126,38 @@ names a tool that does not exist; the smoke test proves that rejection.
 | Hooks | None shipped. Deny rules already stop an action before it runs, and a PostToolUse hook runs only after the tool already ran, so it could detect but not prevent. Stage gates stay in the verifiers | [hooks](https://code.claude.com/docs/en/hooks) |
 | Subagents | Optional in Stage 03. Use parallel subagents only for candidates whose research does not depend on each other. The main agent writes the one `research-packet.md` and `source-ledger.md` and runs the gate; a subagent never writes a stage receipt | [subagents](https://code.claude.com/docs/en/sub-agents) |
 | Plugin | Not packaged. The repository is the package until a second operator proves a plugin would help | Owner decision |
+
+## 9. Each rule and the control that enforces it
+
+Written rules guide the agent. Controls stop or catch a mistake whatever the
+agent intends. Each non-negotiable rule below names its control and the proof.
+
+| Rule | Control | Proof that the control works | Still needs a human |
+|---|---|---|---|
+| An agent never schedules, sends, activates, or publishes | Shadow mode writes nothing external; every MCP tool asks first; the publication verifier rejects any non-human publish authority | Smoke test: "Unclear publishing authority rejection: passed" | The named human decides every live action |
+| No password, key, or token in any workbook file | Template verifier secret scan; publication verifier; `.env` read deny rule | Smoke test: "Exposed secret rejection: passed"; a headless probe could not read a planted `.env` | Keep secrets out of what you paste into chat |
+| Only the human pushes to GitHub | `Bash(git push *)` deny rule | Rule present, checked on every CI run | The operator runs `git push` themselves |
+| The shared safety rules cannot quietly disappear | Template verifier requires the ask and deny rules | Smoke test: "Dropped safety rule rejection: passed" | Review any change to `.claude/settings.json` |
+| The brief and the profile are human-approved before any edition | Publication verifier gates (`--brief-only`, then profile review) | Smoke test: draft brief and unconfigured contract rejections | The owner reads and approves both |
+| No stage is skipped | Edition verifier requires a passing receipt for every earlier stage | `verify-edition.py --require-through 08_delivery` | None for routine stages |
+| Real newsletters stay private | `.gitignore` excludes `publications/` and `editions/` | Template verifier treats them as unpublished | Choose a private backup |
+
+Managed settings, single sign-on, and IP allowlists are organization controls.
+A single operator does not need them; an organization that uses them applies
+its own policy on top of this table.
+
+## 10. Data retention facts for Claude Code users
+
+Checked on 9 October 2026 against the official
+[data usage page](https://code.claude.com/docs/en/data-usage).
+
+- Claude Code keeps session transcripts on your computer in plaintext under
+  `~/.claude/projects/` for 30 days by default, adjustable with
+  `cleanupPeriodDays`. Treat that folder as private.
+- Consumer accounts (Free, Pro, Max) choose whether their data may be used to
+  improve models; retention is 5 years if allowed and 30 days if not.
+- Commercial accounts (Team, Enterprise, API) have standard 30-day retention,
+  and Anthropic does not train on them unless the customer opts in.
+- Provider certifications are in the [Anthropic Trust Center](https://trust.anthropic.com).
+  They describe the provider's controls. Your stage receipts prove what your
+  own run did; neither replaces the other.

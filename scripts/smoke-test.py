@@ -510,6 +510,13 @@ def main() -> int:
         editorial_path.write_text(editorial)
         print("Exposed secret rejection: passed")
 
+        settings_path = sandbox / ".claude" / "settings.json"
+        settings = settings_path.read_text()
+        settings_path.write_text(settings.replace('"Read(./.env)",', "", 1))
+        run(sandbox, "scripts/verify-template.py", expect_success=False)
+        settings_path.write_text(settings)
+        print("Dropped safety rule rejection: passed")
+
         run(
             sandbox,
             "scripts/stamp.py",
