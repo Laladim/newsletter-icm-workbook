@@ -3,9 +3,12 @@
 You do not need to understand the folder structure before using this workbook.
 Choose one path below.
 
-Before you start: you need Python 3.9 or newer and either Claude Code or Codex
-signed in on your own account. The workbook needs no API key, connector, or
-MCP server.
+Before you start: you need Python 3.9 or newer and an AI coding agent signed
+in on your own account. For Claude Code, that is a Pro, Max, Team, Enterprise,
+or Console account; the free Claude plan does not include it. For Codex, use a
+ChatGPT plan that includes Codex or an OpenAI API key. The workbook needs no
+API key, connector, or MCP server of its own. Details and model choices per
+stage are in `deploy/DEPLOYMENT-DECISION.md`.
 
 ## Guided path with Claude Code or Codex
 

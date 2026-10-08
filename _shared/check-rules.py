@@ -83,7 +83,7 @@ def discover(m: dict) -> set:
         for p in base.rglob("*.md"):
             if ignore & set(p.relative_to(ROOT).parts):
                 continue
-            found.add(str(p.relative_to(ROOT)))
+            found.add(p.relative_to(ROOT).as_posix())
     for f in cfg["files"]:
         if (ROOT / f).exists():
             found.add(f)

@@ -160,7 +160,7 @@ def verify_map_coverage(errors: list[str]) -> None:
         return
     patterns = [row["path"] for row in rows]
     for path in public_files():
-        relative = str(path.relative_to(ROOT))
+        relative = path.relative_to(ROOT).as_posix()
         if not any(fnmatch.fnmatch(relative, pattern) for pattern in patterns):
             errors.append(f"unclassified repository artifact: {relative}")
 
@@ -237,7 +237,7 @@ def main() -> int:
                 errors.append(
                     f"credential-like value in {path.relative_to(ROOT)}: {pattern.pattern}"
                 )
-        if "—" in text or "&mdash;" in lowered or "&#8212;" in lowered or "&#x2014;" in lowered:
+        if "\u2014" in text or "&mdash;" in lowered or "&#8212;" in lowered or "&#x2014;" in lowered:
             errors.append(f"em dash found in {path.relative_to(ROOT)}")
 
     generic_paths = [
